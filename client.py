@@ -1,7 +1,7 @@
 #
-#   Hello World client in Python
+#   Reward client in Python
 #   Connects REQ socket to tcp://localhost:5555
-#   Sends "Hello" to server, expects "World" back
+#   Sends "Requesting reward" to server, expects "Reward: <coffee> <pastry>" back
 #
 
 import zmq
@@ -9,7 +9,7 @@ import zmq
 context = zmq.Context()
 
 # Socket to talk to server
-print("Connecting to hello world server…")
+print("Connecting to reward server…")
 socket = context.socket(zmq.REQ)
 socket.connect("tcp://localhost:5555")
 
